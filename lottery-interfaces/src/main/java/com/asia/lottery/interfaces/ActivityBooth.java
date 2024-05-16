@@ -8,9 +8,11 @@ import com.asia.lottery.rpc.IActivityBooth;
 import com.asia.lottery.rpc.dto.ActivityDto;
 import com.asia.lottery.rpc.req.ActivityReq;
 import com.asia.lottery.rpc.res.ActivityRes;
+import org.apache.dubbo.config.annotation.Service;
 
 import javax.annotation.Resource;
 
+@Service
 public class ActivityBooth implements IActivityBooth {
 
     @Resource
