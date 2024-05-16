@@ -3,13 +3,15 @@ package com.asia.lottery.rpc.res;
 import com.asia.lottery.common.Result;
 import com.asia.lottery.rpc.dto.ActivityDto;
 
+import java.io.Serializable;
+
 /**
  * @author by asia
  * @Classname ActivityRes
  * @Description TODO
  * @Date 2024/5/16 23:52
  */
-public class ActivityRes {
+public class ActivityRes implements Serializable {
 
     private Result result;
 
