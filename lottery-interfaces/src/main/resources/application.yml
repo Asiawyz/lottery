@@ -5,8 +5,8 @@ spring:
   datasource:
     username: root
     password: wyz19960329
-    url: jdbc:mysql://116.198.32.176:3306/lottery?useUnicode=true
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://116.198.32.176:3306/lottery?useUnicode=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
