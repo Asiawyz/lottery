@@ -4,6 +4,9 @@ import com.asia.lottery.domain.strategy.model.vo.AwardRateInfo;
 
 import java.util.List;
 
+/**
+ * @author asia
+ */
 public interface IDrawAlgorithm {
 
     /**
@@ -29,16 +32,16 @@ public interface IDrawAlgorithm {
 
     /**
      * 判断是否做了数据初始化
-     * @param strategyID    策略ID
-     * @return
+     * @param strategyId    策略ID
+     * @return true/false
      */
-    boolean isExistRateTuple(Long strategyID);
+    boolean isExistRateTuple(Long strategyId);
 
     /**
      * SecureRandom 生成随机数，索引到对应的奖品信息返回结果
      * @param strategyId        策略 ID
      * @param excludeAwardIds   排除掉已经不能作为抽奖的奖品 ID，留给风控和空库存使用
-     * @return
+     * @return 抽奖结果
      */
     String randomDraw(Long strategyId, List<String> excludeAwardIds);
 

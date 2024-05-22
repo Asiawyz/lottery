@@ -2,7 +2,6 @@ package com.asia.lottery.test;
 
 import com.asia.lottery.domain.strategy.model.vo.AwardRateInfo;
 import com.asia.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
-import com.sun.org.apache.bcel.internal.generic.DCONST;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +18,7 @@ import java.util.List;
 public class DrawAlgorithmTest {
 
 //    @Resource(name = "singleRateRandomDrawAlgorithm")
-    @Resource(name = "defaultRateRandomDrawAlgorithm")
+    @Resource(name = "entiretyRateRandomDrawAlgorithm")
     private IDrawAlgorithm drawAlgorithm;
 
     public Long strategyId = 100001L;

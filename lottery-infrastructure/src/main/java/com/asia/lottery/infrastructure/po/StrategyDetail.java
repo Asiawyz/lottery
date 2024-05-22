@@ -6,24 +6,29 @@ import java.util.Date;
 public class StrategyDetail {
 
     /**
-     * 自增 ID
+     * 自增ID
      */
-    private Long id;
+    private String id;
 
     /**
-     * 策略 ID
+     * 策略ID
      */
     private Long strategyId;
 
     /**
-     * 奖品 ID
+     * 奖品ID
      */
     private String awardId;
 
     /**
-     * 奖品数量
+     * 奖品库存
      */
     private Integer awardCount;
+
+    /**
+     * 奖品剩余库存
+     */
+    private Integer awardSurplusCount;
 
     /**
      * 中奖概率
@@ -33,18 +38,18 @@ public class StrategyDetail {
     /**
      * 创建时间
      */
-    private Date createTime;
+    private String createTime;
 
     /**
      * 修改时间
      */
-    private Date updateTime;
+    private String updateTime;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -72,6 +77,14 @@ public class StrategyDetail {
         this.awardCount = awardCount;
     }
 
+    public Integer getAwardSurplusCount() {
+        return awardSurplusCount;
+    }
+
+    public void setAwardSurplusCount(Integer awardSurplusCount) {
+        this.awardSurplusCount = awardSurplusCount;
+    }
+
     public BigDecimal getAwardRate() {
         return awardRate;
     }
@@ -80,19 +93,19 @@ public class StrategyDetail {
         this.awardRate = awardRate;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public String getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
 }
