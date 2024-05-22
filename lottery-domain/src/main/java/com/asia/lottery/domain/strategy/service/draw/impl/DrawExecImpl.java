@@ -1,23 +1,12 @@
 package com.asia.lottery.domain.strategy.service.draw.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.asia.lottery.domain.strategy.model.aggregates.StrategyRich;
-import com.asia.lottery.domain.strategy.model.req.DrawReq;
-import com.asia.lottery.domain.strategy.model.res.DrawResult;
-import com.asia.lottery.domain.strategy.repository.IStrategyRepository;
 import com.asia.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
 import com.asia.lottery.domain.strategy.service.draw.AbstractDrawBase;
-import com.asia.lottery.domain.strategy.service.draw.IDrawExec;
-import com.asia.lottery.infrastructure.po.Award;
-import com.asia.lottery.infrastructure.po.Strategy;
-import com.asia.lottery.infrastructure.po.StrategyDetail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service("drawExec")
@@ -29,7 +18,7 @@ public class DrawExecImpl extends AbstractDrawBase {
     protected List<String> queryExcludeAwardIds(Long strategyId) {
         List<String> awardList = strategyRepository.queryNoStockStrategyAwardList(strategyId);
         logger.info("执行抽奖策略 strategyId: {}，无库存排除奖品列表 ID 集合：awardList: {}", strategyId, JSON.toJSONString(awardList));
-        return Collections.emptyList();
+        return awardList;
     }
 
     @Override
