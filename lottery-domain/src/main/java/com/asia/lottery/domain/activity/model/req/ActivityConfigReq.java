@@ -2,6 +2,9 @@ package com.asia.lottery.domain.activity.model.req;
 
 import com.asia.lottery.domain.activity.model.aggregates.ActivityConfigRich;
 
+/**
+ * @description 活动配置请求对象
+ */
 public class ActivityConfigReq {
 
     /**
